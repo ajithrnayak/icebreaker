@@ -1,31 +1,65 @@
 /*! HTML5 Boilerplate v7.3.0 | MIT License | https://html5boilerplate.com/ */
-
 /* main.css 2.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
-/*
- * What follows is the result of much research on cross-browser styling.
- * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
- * Kroc Camen, and the H5BP dev community and team.
- */
 
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
 
+:root {
+  --color-primary: #C1292E;
+  --color-variant: rgba(193, 41, 46, 0.1);
+  --color-background: #FDFFFC;
+  --color-text: #202020;
+  --color-shadow: rgba($black, 0.125);
+  --color-link-visited: rgba(240, 113, 103, 0.5);
+}
+
 html {
-  color: #222;
-  font-size: 1em;
-  line-height: 1.4;
+  color: var(--color-text);
+  font-size: 24px;
+  font-weight: normal;
+  font-family: "Nunito", sans-serif, -apple-system, BlinkMacSystemFont, Segoe UI,
+    Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji,
+    Segoe UI Symbol;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--color-background);
+  min-height: 100vh;
+  position: relative;
+  overflow: auto;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+a,
+a:visited {
+  color: var(--color-text);
+  text-decoration: underline;
+}
+a:hover,
+a:focus {
+  color: var(--color-primary);
 }
 
 /*
- * Remove text-shadow in selection highlight:
- * https://twitter.com/miketaylr/status/12228805301
- *
- * Vendor-prefixed and regular ::selection selectors cannot be combined:
- * https://stackoverflow.com/a/16982510/7133471
- *
- * Customize the background color to match your design.
- */
+   * Remove text-shadow in selection highlight:
+   * https://twitter.com/miketaylr/status/12228805301
+   *
+   * Vendor-prefixed and regular ::selection selectors cannot be combined:
+   * https://stackoverflow.com/a/16982510/7133471
+   *
+   * Customize the background color to match your design.
+   */
 
 ::-moz-selection {
   background: #b3d4fc;
@@ -38,8 +72,8 @@ html {
 }
 
 /*
- * A better looking default horizontal rule
- */
+   * A better looking default horizontal rule
+   */
 
 hr {
   display: block;
@@ -51,10 +85,10 @@ hr {
 }
 
 /*
- * Remove the gap between audio, canvas, iframes,
- * images, videos and the bottom of their containers:
- * https://github.com/h5bp/html5-boilerplate/issues/440
- */
+   * Remove the gap between audio, canvas, iframes,
+   * images, videos and the bottom of their containers:
+   * https://github.com/h5bp/html5-boilerplate/issues/440
+   */
 
 audio,
 canvas,
@@ -66,8 +100,8 @@ video {
 }
 
 /*
- * Remove default fieldset styles.
- */
+   * Remove default fieldset styles.
+   */
 
 fieldset {
   border: 0;
@@ -76,16 +110,16 @@ fieldset {
 }
 
 /*
- * Allow only vertical resizing of textareas.
- */
+   * Allow only vertical resizing of textareas.
+   */
 
 textarea {
   resize: vertical;
 }
 
 /* ==========================================================================
-   Browser Upgrade Prompt
-   ========================================================================== */
+     Browser Upgrade Prompt
+     ========================================================================== */
 
 .browserupgrade {
   margin: 0.2em 0;
@@ -95,29 +129,29 @@ textarea {
 }
 
 /* ==========================================================================
-   Author's custom styles
-   ========================================================================== */
+     Author's custom styles
+     ========================================================================== */
 
 /* ==========================================================================
-   Helper classes
-   ========================================================================== */
+     Helper classes
+     ========================================================================== */
 
 /*
- * Hide visually and from screen readers
- */
+   * Hide visually and from screen readers
+   */
 
 .hidden {
   display: none !important;
 }
 
 /*
-* Hide only visually, but have it available for screen readers:
-* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
-*
-* 1. For long content, line feeds are not interpreted as spaces and small width
-*    causes content to wrap 1 word per line:
-*    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
-*/
+  * Hide only visually, but have it available for screen readers:
+  * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+  *
+  * 1. For long content, line feeds are not interpreted as spaces and small width
+  *    causes content to wrap 1 word per line:
+  *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+  */
 
 .sr-only {
   border: 0;
@@ -133,10 +167,10 @@ textarea {
 }
 
 /*
-* Extends the .sr-only class to allow the element
-* to be focusable when navigated to via the keyboard:
-* https://www.drupal.org/node/897638
-*/
+  * Extends the .sr-only class to allow the element
+  * to be focusable when navigated to via the keyboard:
+  * https://www.drupal.org/node/897638
+  */
 
 .sr-only.focusable:active,
 .sr-only.focusable:focus {
@@ -150,24 +184,24 @@ textarea {
 }
 
 /*
-* Hide visually and from screen readers, but maintain layout
-*/
+  * Hide visually and from screen readers, but maintain layout
+  */
 
 .invisible {
   visibility: hidden;
 }
 
 /*
-* Clearfix: contain floats
-*
-* For modern browsers
-* 1. The space content is one way to avoid an Opera bug when the
-*    `contenteditable` attribute is included anywhere else in the document.
-*    Otherwise it causes space to appear at the top and bottom of elements
-*    that receive the `clearfix` class.
-* 2. The use of `table` rather than `block` is only necessary if using
-*    `:before` to contain the top-margins of child elements.
-*/
+  * Clearfix: contain floats
+  *
+  * For modern browsers
+  * 1. The space content is one way to avoid an Opera bug when the
+  *    `contenteditable` attribute is included anywhere else in the document.
+  *    Otherwise it causes space to appear at the top and bottom of elements
+  *    that receive the `clearfix` class.
+  * 2. The use of `table` rather than `block` is only necessary if using
+  *    `:before` to contain the top-margins of child elements.
+  */
 
 .clearfix:before,
 .clearfix:after {
@@ -182,10 +216,10 @@ textarea {
 }
 
 /* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
+     EXAMPLE Media Queries for Responsive Design.
+     These examples override the primary ('mobile first') styles.
+     Modify as content requires.
+     ========================================================================== */
 
 @media only screen and (min-width: 35em) {
   /* Style adjustments for viewports that meet the condition */
@@ -199,10 +233,10 @@ textarea {
 }
 
 /* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request:
-   https://www.phpied.com/delay-loading-your-print-css/
-   ========================================================================== */
+     Print styles.
+     Inlined to avoid the additional HTTP request:
+     https://www.phpied.com/delay-loading-your-print-css/
+     ========================================================================== */
 
 @media print {
   *,
@@ -225,9 +259,9 @@ textarea {
     content: " (" attr(title) ")";
   }
   /*
-     * Don't show links that are fragment identifiers,
-     * or use the `javascript:` pseudo protocol
-     */
+       * Don't show links that are fragment identifiers,
+       * or use the `javascript:` pseudo protocol
+       */
   a[href^="#"]:after,
   a[href^="javascript:"]:after {
     content: "";
@@ -241,9 +275,9 @@ textarea {
     page-break-inside: avoid;
   }
   /*
-     * Printing Tables:
-     * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
-     */
+       * Printing Tables:
+       * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+       */
   thead {
     display: table-header-group;
   }
@@ -263,27 +297,75 @@ textarea {
   }
 }
 
-.centered {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-  font-size: 120px;
+.content-wrapper {
+  min-height: 100vh;
+  position: relative;
+  background: var(--color-background-page);
+  overflow: hidden;
+  transition: background 1s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-.sparkley {
-  background: #3e5871;
-  color: white;
-  border: none;
-  padding: 16px 36px;
-  font-weight: normal;
-  border-radius: 3px;
-  transition: all 0.25s ease;
-  box-shadow: 0 38px 32px -23px black;
-  margin: 0 1em 1em;
+.app-name {
+  font-weight: bold;
+  font-size: 28px;
+  color: var(--color-primary);
+  padding-bottom: 8px;
 }
-.sparkley:hover {
-  background: #2c3e50;
-  color: rgba(255, 255, 255, 0.2);
+
+.top-navbar {
+  height: 96px;
+  margin: 0 96px 0 96px;
+  width: inherit;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-end;
+  border-bottom: 2px solid var(--color-primary);
+  border-radius: 1px;
+}
+
+.action-button {
+  margin: 0;
+  height: 35px;
+  background: transparent;
+  border: none;
+  font-weight: normal;
+  padding: 0 10px;
+}
+
+main {
+  padding: 0 90px;
+  min-width: inherit;
+  min-height: calc(100vh - 250px);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+h1 {
+  font-size: 120px;
+  margin: 0;
+}
+
+footer {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: inherit;
+  min-width: inherit;
+  margin: 40px 0;
+  padding: 0 90px;
+}
+
+@media only screen and (max-width: 768px) {
+}
+
+@media only screen and (max-width: 1400px) {
+}
+
+@media only screen and (max-width: 1024px) {
 }
