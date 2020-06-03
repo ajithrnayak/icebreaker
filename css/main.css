@@ -336,12 +336,12 @@ textarea {
 main {
   padding: 0 90px;
   min-width: inherit;
-  min-height: calc(100vh - 250px);
+  min-height: calc(100vh - 100px);
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   flex-wrap: nowrap;
-  align-items: center;
+  align-items: flex-start;
 }
 
 h1 {
