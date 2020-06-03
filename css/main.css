@@ -9,7 +9,7 @@
   --color-primary: #C1292E;
   --color-variant: rgba(193, 41, 46, 0.1);
   --color-background: #FDFFFC;
-  --color-text: #202020;
+  --color-text: #040304;
   --color-shadow: rgba($black, 0.125);
   --color-link-visited: rgba(240, 113, 103, 0.5);
 }
@@ -334,6 +334,8 @@ textarea {
 }
 
 main {
+  margin-top: 45px;
+  margin-bottom: 45px;
   padding: 0 90px;
   min-width: inherit;
   min-height: calc(100vh - 100px);
@@ -341,7 +343,7 @@ main {
   flex-direction: column;
   justify-content: center;
   flex-wrap: nowrap;
-  align-items: flex-start;
+  align-items: center;
 }
 
 h1 {
@@ -359,6 +361,19 @@ footer {
   min-width: inherit;
   margin: 40px 0;
   padding: 0 90px;
+}
+
+.questions {
+  margin-bottom: 12px;
+  padding: 12px;
+  min-height: 100px;
+  width: 725px;
+  color: var(--color-text);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 12px;
 }
 
 @media only screen and (max-width: 768px) {
