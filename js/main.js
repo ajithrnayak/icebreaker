@@ -6,7 +6,8 @@ var colors = [
   "#CFE0C3",
   "#F8F7FF",
   "#FFEEDD",
-  "#FFF8E8",
+  "#E8FCC2",
+  "#F5F3BB"
 ];
 
 $.getJSON("icebreakers.json", function (icebreakers) {
