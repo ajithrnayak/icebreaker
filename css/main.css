@@ -365,9 +365,10 @@ footer {
 
 .questions {
   margin-bottom: 12px;
-  padding: 12px;
+  padding: 24px;
   min-height: 100px;
-  width: 725px;
+  max-width: 725px;
+  width: 70vw;
   color: var(--color-text);
   display: flex;
   flex-direction: row;
@@ -376,11 +377,9 @@ footer {
   border-radius: 12px;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 420px) {
+  .top-navbar {
+    margin: 0 24px 0 24px;
+  }
 }
 
-@media only screen and (max-width: 1400px) {
-}
-
-@media only screen and (max-width: 1024px) {
-}
