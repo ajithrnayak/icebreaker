@@ -1,6 +1,6 @@
 {
-  "short_name": "",
-  "name": "",
+  "short_name": "icebreaker",
+  "name": "icebreaker",
   "icons": [{
     "src": "icon.png",
     "type": "image/png",
