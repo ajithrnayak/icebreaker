@@ -353,14 +353,15 @@ h1 {
 
 footer {
   position: relative;
+  font-size: 18px;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   width: inherit;
   min-width: inherit;
   margin: 40px 0;
-  padding: 0 90px;
+  padding: 0 96px;
 }
 
 .questions {
@@ -380,6 +381,10 @@ footer {
 @media only screen and (max-width: 420px) {
   .top-navbar {
     margin: 0 24px 0 24px;
+  }
+  footer {
+    flex-direction: column;
+    padding: 0 24px;
   }
 }
 
