@@ -1,4 +1,4 @@
 # icebreaker
-An app with randomly picked icebreaker questions curated from r/Askreddit 
+An app with curated icebreaker questions from r/Askreddit 
 
 ![mockup](icebreaker-list.png)
