@@ -6,9 +6,8 @@
    ========================================================================== */
 
 :root {
-  --color-primary: #C1292E;
-  --color-variant: rgba(193, 41, 46, 0.1);
-  --color-background: #FDFFFC;
+  --color-primary: #FF9495;
+  --color-background: #FAF9F3;
   --color-text: #040304;
   --color-shadow: rgba($black, 0.125);
   --color-link-visited: rgba(240, 113, 103, 0.5);
