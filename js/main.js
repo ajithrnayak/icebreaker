@@ -27,7 +27,7 @@ function createIcebreakers(questions) {
       text: value,
       background: random_color,
     });
-    newdiv.css("background-color", random_color);
+    // newdiv.css("background-color", random_color);
     $("main").append(newdiv);
   });
 }
