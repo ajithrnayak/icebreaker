@@ -365,8 +365,9 @@ footer {
 .questions {
   margin-bottom: 12px;
   padding: 24px;
-  max-width: 725px;
+  max-width: 950px;
   width: 70vw;
+  min-width: 320px;
   color: var(--color-text);
   display: flex;
   flex-direction: row;
@@ -385,6 +386,10 @@ footer {
   footer {
     flex-direction: column;
     padding: 0 24px;
+  }
+  .questions {
+    padding: 16px;
+    width: 80vw;
   }
 }
 
