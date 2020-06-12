@@ -7,7 +7,7 @@ var colors = [
   "#F8F7FF",
   "#FFEEDD",
   "#E8FCC2",
-  "#F5F3BB"
+  "#F5F3BB",
 ];
 
 $.getJSON("icebreakers.json", function (icebreakers) {
@@ -21,12 +21,13 @@ function createIcebreakers(questions) {
     bgColors.push(colors[i % colors.length]);
   }
   $.each(questions, function (index, value) {
-    var random_color = bgColors[index];
+    let containerID = "question" + index;
     var newdiv = $("<div>", {
       class: "questions",
+      id: containerID,
       text: value,
-      background: random_color,
     });
+    // var random_color = bgColors[index];
     // newdiv.css("background-color", random_color);
     $("main").append(newdiv);
   });
