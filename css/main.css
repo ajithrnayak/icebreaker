@@ -308,7 +308,7 @@ textarea {
   font-weight: bold;
   font-size: 28px;
   color: var(--color-primary);
-  padding-bottom: 8px;
+  padding: 8px 0;
 }
 
 .app-descr {
@@ -391,6 +391,7 @@ footer {
 @media only screen and (max-width: 750px) {
   .top-navbar {
     flex-direction: column;
+    justify-content: center;
     align-items: center;
   }
 }
