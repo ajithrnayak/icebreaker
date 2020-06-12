@@ -7,6 +7,8 @@
 
 :root {
   --color-primary: #FF9495;
+  --color-variant1: rgba(255, 148, 149, 0.1);
+  --color-variant2: rgba(10, 26, 95, 0.1);
   --color-background: #FAF9F3;
   --color-text: #0A1A5F;
   --color-shadow: rgba($black, 0.125);
@@ -21,6 +23,7 @@ html {
     Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji,
     Segoe UI Symbol;
   box-sizing: border-box;
+  cursor: url(../pointer.svg), auto;
 }
 
 body {
@@ -374,6 +377,12 @@ footer {
   justify-content: flex-start;
   align-items: center;
   border-radius: 12px;
+  transition: all 0.5s ease;
+}
+
+.questions:hover {
+  background-color: var(--color-variant2);
+  cursor: url(../copy.svg), auto;
 }
 
 @media only screen and (max-width: 420px) {
