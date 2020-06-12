@@ -1,2 +1,2 @@
-/home                                                                 /                                             200
-https://icebreakertips.netlify.app/*									                https://icebreaker.tips/:splat 				        200!
+https://icebreakertips.netlify.app/*									                https://icebreaker.tips/:splat 				        301!
+http://icebreakertips.netlify.app/*									                  https://icebreaker.tips/:splat 				        301!
