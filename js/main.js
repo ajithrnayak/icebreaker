@@ -26,6 +26,11 @@ function createIcebreakers(questions) {
       class: "questions",
       id: containerID,
       text: value,
+    }).on('click', function () {
+      navigator.clipboard.writeText(value);
+      $(this).addClass('copied').delay(1000).queue(function () {
+        $(this).removeClass("copied").dequeue();
+      });
     });
     // var random_color = bgColors[index];
     // newdiv.css("background-color", random_color);
