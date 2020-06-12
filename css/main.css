@@ -383,21 +383,12 @@ footer {
 
 .questions:hover {
   background-color: var(--color-variant2);
-  cursor: copy;
+  cursor: url(../copy.svg), auto;
 }
 
 .questions.copied {
-  background-color: rgba(31, 142, 17,0.3);
-}
-
-.questions.copied::after {
-  position: absolute;
-  display:flex;
-  width:100%;
-  align-items: center;
-  justify-content: center;
-  color:#fff;
-  content:'Copied to clipboard'
+  background-color: var(--color-variant1);
+  cursor: url(../copied.svg), auto;
 }
 
 @media only screen and (max-width: 420px) {
